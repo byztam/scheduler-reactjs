@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Content1 from '../../components/home/content1'
-import Content2 from '../../components/home/content2'
-import Content3 from '../../components/home/content3'
+import Content1 from '../../components/scheduler/content1'
+import Content2 from '../../components/scheduler/content2'
+import Content3 from '../../components/scheduler/content3'
 
 class Home extends Component {
     render(){
