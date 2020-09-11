@@ -1,6 +1,6 @@
 const Resource = {
     "login": {
-        "loginTitle": "Đăng nhập",
+        "lblLoginTitle": "Đăng nhập",
         "lblUername": "Tài khoản",
         "lblPassword": "Mật khẩu",
         "btnLogin": "Đăng nhập",

@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import PermIdentityOutlinedIcon from '@material-ui/icons/PermIdentityOutlined';
 
-import { Resource, Message } from './../../resource/resource.vi';
+import { Resource, Message } from '../../resources/resource.vi';
 import { stringFormat } from '../../utils/cfuntion';
 import { ApiUrl } from './../../constants/apiConfig';
 import callApi from './../../utils/callApi';
@@ -24,7 +24,7 @@ class Login extends Component {
             validLogin: ""
         }
     }
-    login_Click = (da) => {
+    login_Click = () => {
         var isValid = true;
         var user = this.txtUser.value;
         var password = this.txtPassword.value;
@@ -70,7 +70,7 @@ class Login extends Component {
         return (
             <div className={classes.backgroud}>
                 <div className={classes.formlogin}>
-                    <span className={classes.formtitle}>{Resource.login.loginTitle}</span>
+                    <span className={classes.formtitle}>{Resource.login.lblLoginTitle}</span>
                     <TextField
                         className={classes.text}
                         inputRef={ref => { this.txtUser = ref; }}
