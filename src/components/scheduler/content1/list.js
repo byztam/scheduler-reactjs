@@ -23,13 +23,13 @@ class ListHeader extends Component {
                             <TableHead>
                                 <TableRow>
                                     <TableCell padding="none" align="center" style={{width: "150px"}}></TableCell>
-                                    <TableCell padding="none" align="center">Locked</TableCell>
-                                    <TableCell padding="none" align="center">Open</TableCell>
-                                    <TableCell padding="none" align="center">Open</TableCell>
-                                    <TableCell padding="none" align="center">Open</TableCell>
-                                    <TableCell padding="none" align="center">Open</TableCell>
-                                    <TableCell padding="none" align="center">Open</TableCell>
-                                    <TableCell padding="none" align="center">Open</TableCell>
+                                    <TableCell padding="none" align="center" className={classes.locked}>Locked</TableCell>
+                                    <TableCell padding="none" align="center" className={classes.open}>Open</TableCell>
+                                    <TableCell padding="none" align="center" className={classes.open}>Open</TableCell>
+                                    <TableCell padding="none" align="center" className={classes.open}>Open</TableCell>
+                                    <TableCell padding="none" align="center" className={classes.open}>Open</TableCell>
+                                    <TableCell padding="none" align="center" className={classes.open}>Open</TableCell>
+                                    <TableCell padding="none" align="center" className={classes.open}>Open</TableCell>
                                     <TableCell padding="none" align="center"></TableCell>
                                     <TableCell padding="none" align="center"></TableCell>
                                 </TableRow>
@@ -57,7 +57,7 @@ class ListHeader extends Component {
                             </TableHead>
                             <TableBody>
                                 <TableRow>
-                                    <TableCell padding="none" align="left">Wroking hours</TableCell>
+                                    <TableCell variant="head" padding="none" align="left">Wroking hours</TableCell>
                                     <TableCell padding="none" align="center">8h/day</TableCell>
                                     <TableCell padding="none" align="center">8h/day</TableCell>
                                     <TableCell padding="none" align="center">8h/day</TableCell>
@@ -69,7 +69,7 @@ class ListHeader extends Component {
                                     <TableCell padding="none" align="center"></TableCell>
                                 </TableRow>
                                 <TableRow>
-                                    <TableCell padding="none" align="left">Attendance hours</TableCell>
+                                    <TableCell variant="head" padding="none" align="left">Attendance hours</TableCell>
                                     <TableCell padding="none" align="center">8h/day</TableCell>
                                     <TableCell padding="none" align="center">8h/day</TableCell>
                                     <TableCell padding="none" align="center">8h/day</TableCell>
@@ -82,13 +82,13 @@ class ListHeader extends Component {
                                 </TableRow>
                                 <TableRow>
                                     <TableCell padding="none"></TableCell>
-                                    <TableCell padding="none" align="center">Nomarl</TableCell>
-                                    <TableCell padding="none" align="center">Nomarl</TableCell>
-                                    <TableCell padding="none" align="center">Nomarl</TableCell>
-                                    <TableCell padding="none" align="center">Nomarl</TableCell>
-                                    <TableCell padding="none" align="center">Nomarl</TableCell>
-                                    <TableCell padding="none" align="center">Nomarl</TableCell>
-                                    <TableCell padding="none" align="center">Nomarl</TableCell>
+                                    <TableCell padding="none" align="center" className={classes.nomarl}>Nomarl</TableCell>
+                                    <TableCell padding="none" align="center" className={classes.nomarl}>Nomarl</TableCell>
+                                    <TableCell padding="none" align="center" className={classes.nomarl}>Nomarl</TableCell>
+                                    <TableCell padding="none" align="center" className={classes.nomarl}>Nomarl</TableCell>
+                                    <TableCell padding="none" align="center" className={classes.nomarl}>Nomarl</TableCell>
+                                    <TableCell padding="none" align="center" className={classes.nomarl}>Nomarl</TableCell>
+                                    <TableCell padding="none" align="center" className={classes.nomarl}>Nomarl</TableCell>
                                     <TableCell padding="none" rowSpan="2" className={classes.total}></TableCell>
                                     <TableCell padding="none" rowSpan="2"></TableCell>
                                 </TableRow>

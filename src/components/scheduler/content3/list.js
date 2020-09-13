@@ -7,7 +7,10 @@ import {
     TableHead,
     TableRow,
     Grid,
-    Paper
+    Paper, 
+    TextField,
+    Button,
+    Typography
 } from '@material-ui/core';
 import styles from './styles/listStyle';
 import { withStyles } from '@material-ui/core';
@@ -22,7 +25,7 @@ class ListHeader extends Component {
                         <Table className={classes.table}  size="small" aria-label="caption table">
                             <TableHead>
                                 <TableRow>
-                                    <TableCell padding="none" rowSpan="2" align="center" style={{width: "150px"}}>SUMMARY</TableCell>
+                                    <TableCell padding="none" rowSpan="2" align="center" style={{width: "150px"}}>WORK</TableCell>
                                     <TableCell padding="none" colSpan="2" align="center">MON</TableCell>
                                     <TableCell padding="none" colSpan="2" align="center">TUE</TableCell>
                                     <TableCell padding="none" colSpan="2" align="center">WED</TableCell>
@@ -34,20 +37,20 @@ class ListHeader extends Component {
                                     <TableCell padding="none" align="center" rowSpan="2" className={classes.des}>DESCRIPTION</TableCell>
                                 </TableRow>
                                 <TableRow>
-                                    <TableCell padding="none" align="left">h</TableCell>
-                                    <TableCell padding="none" align="left">text</TableCell>
-                                    <TableCell padding="none" align="left">h</TableCell>
-                                    <TableCell padding="none" align="left">text</TableCell>
-                                    <TableCell padding="none" align="left">h</TableCell>
-                                    <TableCell padding="none" align="left">text</TableCell>
-                                    <TableCell padding="none" align="left">h</TableCell>
-                                    <TableCell padding="none" align="left">text</TableCell>
-                                    <TableCell padding="none" align="left">h</TableCell>
-                                    <TableCell padding="none" align="left">text</TableCell>
-                                    <TableCell padding="none" align="left">h</TableCell>
-                                    <TableCell padding="none" align="left">text</TableCell>
-                                    <TableCell padding="none" align="left">h</TableCell>
-                                    <TableCell padding="none" align="left">text</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>h</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>text</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>h</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>text</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>h</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>text</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>h</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>text</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>h</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>text</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>h</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>text</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>h</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>text</TableCell>
                                 </TableRow>
                             </TableHead>
                             <TableBody>
@@ -90,213 +93,23 @@ class ListHeader extends Component {
                                     <TableCell padding="none" align="left"></TableCell>
                                 </TableRow>
                                 <TableRow>
-                                    <TableCell padding="none" align="left">001-111-2020</TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="center"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                </TableRow>
-                                <TableRow>
-                                    <TableCell padding="none" align="left">001-111-2020</TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="center"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                </TableRow>
-                                <TableRow>
-                                    <TableCell padding="none" align="left">001-111-2020</TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="center"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                </TableRow>
-                                <TableRow>
-                                    <TableCell padding="none" align="left">001-111-2020</TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="center"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                </TableRow>
-                                <TableRow>
-                                    <TableCell padding="none" align="left">001-111-2020</TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="center"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                </TableRow>
-                                <TableRow>
-                                    <TableCell padding="none" align="left">001-111-2020</TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="center"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                </TableRow>
-                                <TableRow>
-                                    <TableCell padding="none" align="left">001-111-2020</TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="center"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                </TableRow>
-                                <TableRow>
-                                    <TableCell padding="none" align="left">001-111-2020</TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="center"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                </TableRow>
-                                <TableRow>
-                                    <TableCell padding="none" align="left">001-111-2020</TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="center"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                </TableRow>
-                                <TableRow>
-                                    <TableCell padding="none" align="left">001-111-2020</TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="center"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                </TableRow>
-                                <TableRow>
-                                    <TableCell padding="none" align="left">001-111-2020</TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
-                                    <TableCell padding="none" align="center"></TableCell>
-                                    <TableCell padding="none" align="left"></TableCell>
+                                    <TableCell colSpan="17" className={classes.tdSaveWork}>
+                                        <Typography component="div" align="justify">
+                                    
+                                                <TextField 
+                                                    id="outlined-basic"
+                                                    label="Add more work"
+                                                    variant="outlined"
+                                                    size="small"/>
+
+                                                <Button 
+                                                    variant="contained" 
+                                                    color="primary" 
+                                                    align="center"
+                                                    className={classes.btnSaveWork}>SAVE WORK</Button>
+                                        
+                                        </Typography>
+                                    </TableCell>
                                 </TableRow>
                             </TableBody>
                         </Table>

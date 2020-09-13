@@ -35,25 +35,25 @@ class ListHeader extends Component {
                                     <TableCell padding="none" align="center" rowSpan="2" className={classes.des}></TableCell>
                                 </TableRow>
                                 <TableRow>
-                                    <TableCell padding="none" align="left">from</TableCell>
-                                    <TableCell padding="none" align="left">till</TableCell>
-                                    <TableCell padding="none" align="left">from</TableCell>
-                                    <TableCell padding="none" align="left">till</TableCell>
-                                    <TableCell padding="none" align="left">from</TableCell>
-                                    <TableCell padding="none" align="left">till</TableCell>
-                                    <TableCell padding="none" align="left">from</TableCell>
-                                    <TableCell padding="none" align="left">till</TableCell>
-                                    <TableCell padding="none" align="left">from</TableCell>
-                                    <TableCell padding="none" align="left">till</TableCell>
-                                    <TableCell padding="none" align="left">from</TableCell>
-                                    <TableCell padding="none" align="left">till</TableCell>
-                                    <TableCell padding="none" align="left">from</TableCell>
-                                    <TableCell padding="none" align="left">till</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>from</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>till</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>from</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>till</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>from</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>till</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>from</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>till</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>from</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>till</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>from</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>till</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>from</TableCell>
+                                    <TableCell padding="none" align="left" className={classes.nomarl}>till</TableCell>
                                 </TableRow>
                             </TableHead>
                             <TableBody>
                                 <TableRow>
-                                    <TableCell padding="none" align="left">Time block #1</TableCell>
+                                    <TableCell padding="none" align="left">Time block <span className={classes.timeblock}>#1</span></TableCell>
                                     <TableCell padding="none" align="left">1:00</TableCell>
                                     <TableCell padding="none" align="left">1:00</TableCell>
                                     <TableCell padding="none" align="left">1:00</TableCell>
@@ -70,7 +70,7 @@ class ListHeader extends Component {
                                     <TableCell padding="none" align="left">1:00</TableCell>
                                 </TableRow>
                                 <TableRow>
-                                    <TableCell padding="none" align="left">Time block #2</TableCell>
+                                    <TableCell padding="none" align="left">Time block <span className={classes.timeblock}>#2</span></TableCell>
                                     <TableCell padding="none" align="left">1:00</TableCell>
                                     <TableCell padding="none" align="left">1:00</TableCell>
                                     <TableCell padding="none" align="left">1:00</TableCell>
@@ -87,7 +87,7 @@ class ListHeader extends Component {
                                     <TableCell padding="none" align="left">1:00</TableCell>
                                 </TableRow>
                                 <TableRow>
-                                    <TableCell padding="none" align="left">Time block #3</TableCell>
+                                    <TableCell padding="none" align="left">Time block <span className={classes.timeblock}>#3</span></TableCell>
                                     <TableCell padding="none" align="left">1:00</TableCell>
                                     <TableCell padding="none" align="left">1:00</TableCell>
                                     <TableCell padding="none" align="left">1:00</TableCell>
@@ -104,7 +104,7 @@ class ListHeader extends Component {
                                     <TableCell padding="none" align="left">1:00</TableCell>
                                 </TableRow>
                                 <TableRow>
-                                    <TableCell padding="none" align="right" colSpan="15">
+                                    <TableCell padding="none" align="right" colSpan="15" className={classes.tdSaveAttendance}>
                                         <Button variant="contained" color="primary">Save Attendance</Button>
                                     </TableCell>
                                 </TableRow>
