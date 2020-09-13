@@ -1,6 +1,11 @@
 const styles = () => ({
+  table:{
+    "& th, td": {
+        padding: '5px 0px'
+    }
+  },
   total: {
-      width: 50
+      width: 100
   },
   des: {
       width: 100

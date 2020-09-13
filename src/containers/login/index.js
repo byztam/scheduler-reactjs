@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
-import styles from './styles';
-import { withStyles } from '@material-ui/core';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
+import { withRouter } from 'react-router-dom';
+import { withStyles, InputAdornment, TextField, Button } from '@material-ui/core';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import PermIdentityOutlinedIcon from '@material-ui/icons/PermIdentityOutlined';
+import { connect } from 'react-redux';
 
+import styles from './styles';
 import { Resource, Message } from '../../resources/resource.vi';
 import { stringFormat } from '../../utils/cfuntion';
 import { ApiUrl } from './../../constants/apiConfig';
 import callApi from './../../utils/callApi';
 import packageConfig from './../../../package.json';
-
+import * as StoreAction from './../../store/actions/userInfo';
+import userInfoModel from './../../store/stateModels/userInfo'
 
 class Login extends Component {
 
@@ -60,7 +60,18 @@ class Login extends Component {
                     })
                     return;
                 }
-                window.location.href = `/${packageConfig.name}/scheduler`;
+
+                var userInfo = userInfoModel;
+                userInfo.UserName = data.data.UserName;
+                userInfo.FullName = data.data.FullName;
+                userInfo.Token = data.data.Token;
+                userInfo.TokenExpired = data.data.TokenExpired;
+                this.props.setUserInfo(userInfo);
+                
+                const { history } = this.props;
+                if(history) {
+                    history.push(`/${packageConfig.name}/scheduler`);
+                }
             }
         });
     }
@@ -139,4 +150,18 @@ class Login extends Component {
     }
 }
 
-export default withStyles(styles)(Login);
+const mapStateToProps = (state) => {
+    return {
+        todos: state.userInfo
+    }
+}
+
+const maptDispatchToProps = (dispatch, props) => {
+    return {
+        setUserInfo: (data) => {
+            dispatch(StoreAction.userInfo(data));
+        }
+    }
+}
+
+export default connect(mapStateToProps, maptDispatchToProps)(withStyles(styles)(withRouter(Login)));
