@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, withRouter } from 'react-router-dom';
 import ScrollToTop from 'react-router-scroll-top';
 
 import Routes from './routes';
@@ -7,7 +7,7 @@ import Routes from './routes';
 class App extends Component {
 	render(){
 		return (
-			<Router>
+			<Router history={withRouter}>
 				<ScrollToTop>
 					<Switch>
 					{

@@ -41,12 +41,15 @@ class Header extends Component {
         return (
             <Menu
                 anchorEl={anchorEl}
-                anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
                 id={menuId}
                 keepMounted
-                transformOrigin={{ vertical: 'top', horizontal: 'right' }}
                 open={isMenuOpen}
                 onClose={this.handleMenuClose}
+                getContentAnchorEl={null}
+                anchorOrigin={{
+                    vertical: "bottom",
+                    horizontal: "center",
+                }}
             >
                 <MenuItem onClick={this.handleMenuClose}>{this.props.todos.FullName}</MenuItem>
                 <MenuItem onClick={this.handleMenuClose}>Logout</MenuItem>
@@ -57,7 +60,6 @@ class Header extends Component {
 
     render(){
         const { classes } = this.props;
-
         return (
             <div>
                 <AppBar
