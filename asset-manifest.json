@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/scheduler-reactjs/static/css/main.6d5cbc97.chunk.css",
-    "main.js": "/scheduler-reactjs/static/js/main.a2153021.chunk.js",
-    "main.js.map": "/scheduler-reactjs/static/js/main.a2153021.chunk.js.map",
+    "main.js": "/scheduler-reactjs/static/js/main.7a56c971.chunk.js",
+    "main.js.map": "/scheduler-reactjs/static/js/main.7a56c971.chunk.js.map",
     "runtime-main.js": "/scheduler-reactjs/static/js/runtime-main.36294fa2.js",
     "runtime-main.js.map": "/scheduler-reactjs/static/js/runtime-main.36294fa2.js.map",
-    "static/js/2.61582fe6.chunk.js": "/scheduler-reactjs/static/js/2.61582fe6.chunk.js",
-    "static/js/2.61582fe6.chunk.js.map": "/scheduler-reactjs/static/js/2.61582fe6.chunk.js.map",
+    "static/js/2.a90d19ed.chunk.js": "/scheduler-reactjs/static/js/2.a90d19ed.chunk.js",
+    "static/js/2.a90d19ed.chunk.js.map": "/scheduler-reactjs/static/js/2.a90d19ed.chunk.js.map",
     "index.html": "/scheduler-reactjs/index.html",
-    "precache-manifest.a91ddec988542fb66a5323298fee1a58.js": "/scheduler-reactjs/precache-manifest.a91ddec988542fb66a5323298fee1a58.js",
+    "precache-manifest.97a38423217bb4e612371aae4595c51f.js": "/scheduler-reactjs/precache-manifest.97a38423217bb4e612371aae4595c51f.js",
     "service-worker.js": "/scheduler-reactjs/service-worker.js",
     "static/css/main.6d5cbc97.chunk.css.map": "/scheduler-reactjs/static/css/main.6d5cbc97.chunk.css.map",
-    "static/js/2.61582fe6.chunk.js.LICENSE.txt": "/scheduler-reactjs/static/js/2.61582fe6.chunk.js.LICENSE.txt",
+    "static/js/2.a90d19ed.chunk.js.LICENSE.txt": "/scheduler-reactjs/static/js/2.a90d19ed.chunk.js.LICENSE.txt",
     "static/media/bg-01.jpg": "/scheduler-reactjs/static/media/bg-01.c92b2d76.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.36294fa2.js",
-    "static/js/2.61582fe6.chunk.js",
+    "static/js/2.a90d19ed.chunk.js",
     "static/css/main.6d5cbc97.chunk.css",
-    "static/js/main.a2153021.chunk.js"
+    "static/js/main.7a56c971.chunk.js"
   ]
 }
