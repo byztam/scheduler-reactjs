@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/scheduler-reactjs/static/css/main.6d5cbc97.chunk.css",
-    "main.js": "/scheduler-reactjs/static/js/main.90802384.chunk.js",
-    "main.js.map": "/scheduler-reactjs/static/js/main.90802384.chunk.js.map",
-    "runtime-main.js": "/scheduler-reactjs/static/js/runtime-main.36294fa2.js",
-    "runtime-main.js.map": "/scheduler-reactjs/static/js/runtime-main.36294fa2.js.map",
-    "static/js/2.a90d19ed.chunk.js": "/scheduler-reactjs/static/js/2.a90d19ed.chunk.js",
-    "static/js/2.a90d19ed.chunk.js.map": "/scheduler-reactjs/static/js/2.a90d19ed.chunk.js.map",
-    "index.html": "/scheduler-reactjs/index.html",
-    "precache-manifest.46d23c34e84fbab64f1d40c70240ed60.js": "/scheduler-reactjs/precache-manifest.46d23c34e84fbab64f1d40c70240ed60.js",
-    "service-worker.js": "/scheduler-reactjs/service-worker.js",
-    "static/css/main.6d5cbc97.chunk.css.map": "/scheduler-reactjs/static/css/main.6d5cbc97.chunk.css.map",
-    "static/js/2.a90d19ed.chunk.js.LICENSE.txt": "/scheduler-reactjs/static/js/2.a90d19ed.chunk.js.LICENSE.txt",
-    "static/media/bg-01.jpg": "/scheduler-reactjs/static/media/bg-01.c92b2d76.jpg"
+    "main.css": "./static/css/main.6d5cbc97.chunk.css",
+    "main.js": "./static/js/main.c55c9025.chunk.js",
+    "main.js.map": "./static/js/main.c55c9025.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.bbafc11f.js",
+    "runtime-main.js.map": "./static/js/runtime-main.bbafc11f.js.map",
+    "static/js/2.a90d19ed.chunk.js": "./static/js/2.a90d19ed.chunk.js",
+    "static/js/2.a90d19ed.chunk.js.map": "./static/js/2.a90d19ed.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.5ba19eb72513cb3744bb85d6b7b9e99f.js": "./precache-manifest.5ba19eb72513cb3744bb85d6b7b9e99f.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.6d5cbc97.chunk.css.map": "./static/css/main.6d5cbc97.chunk.css.map",
+    "static/js/2.a90d19ed.chunk.js.LICENSE.txt": "./static/js/2.a90d19ed.chunk.js.LICENSE.txt",
+    "static/media/bg-01.jpg": "./static/media/bg-01.c92b2d76.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.36294fa2.js",
+    "static/js/runtime-main.bbafc11f.js",
     "static/js/2.a90d19ed.chunk.js",
     "static/css/main.6d5cbc97.chunk.css",
-    "static/js/main.90802384.chunk.js"
+    "static/js/main.c55c9025.chunk.js"
   ]
 }
