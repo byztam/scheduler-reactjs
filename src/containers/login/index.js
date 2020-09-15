@@ -10,7 +10,6 @@ import { Resource, Message } from '../../resources/resource.vi';
 import { stringFormat } from '../../utils/cfuntion';
 import { ApiUrl } from './../../constants/apiConfig';
 import callApi from './../../utils/callApi';
-import packageConfig from './../../../package.json';
 import * as StoreAction from './../../store/actions/userInfo';
 import userInfoModel from './../../store/stateModels/userInfo'
 
@@ -70,7 +69,7 @@ class Login extends Component {
                 
                 const { history } = this.props;
                 if(history) {
-                    history.push(`/${packageConfig.name}/scheduler`);
+                    history.push('/scheduler');
                 }
             }
         });

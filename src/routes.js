@@ -1,17 +1,15 @@
 import React from 'react';
 import Login from './containers/login';
-import Scheduler from './containers/layout/schedulerLayout';
-
-import packageConfig from './../package.json';
+import Scheduler from './containers/layout/scheduler';
 
 const Routes = [
     {
-        path: `/${packageConfig.name}`,
+        path: '/',
         exact: true,
         content: () => <Login/>
     },
     {
-        path: `/${packageConfig.name}/scheduler`,
+        path: '/scheduler',
         exact: true,
         content: () => <Scheduler/>
     }

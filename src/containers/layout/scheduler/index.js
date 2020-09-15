@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Header from './../../components/commons/header';
-import Sidebar from './../../components/commons/sidebar';
+import Header from './../../../components/commons/header';
+import Sidebar from './../../../components/commons/sidebar';
 import { withStyles } from '@material-ui/core';
 
-import styles from './styles/schedulerLayoutStyle';
+import styles from './../styles/schedulerLayoutStyle';
 
-import Index from './../scheduler';
+import Index from './../../scheduler';
 
 class SchedulerLayout extends Component {
     constructor(props){
