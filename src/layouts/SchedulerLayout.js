@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import Header from './../../../components/commons/header';
-import Sidebar from './../../../components/commons/sidebar';
+import Header from './../components/Header/Header';
+import Sidebar from './../components/SideBar/SideBar';
 import { withStyles } from '@material-ui/core';
 
-import styles from './../styles/schedulerLayoutStyle';
-
-import Index from './../../scheduler';
+import styles from './SchedulerLayout.style';
 
 class SchedulerLayout extends Component {
     constructor(props){
@@ -20,6 +18,7 @@ class SchedulerLayout extends Component {
 
     render(){
         const { classes } = this.props;
+        const { children } = this.props;
         
         return (
             <div className={classes.root}>
@@ -27,7 +26,7 @@ class SchedulerLayout extends Component {
                 <Sidebar handleClick={this.toggleSidebar} isOpenSidebar={this.state.isOpenSidebar}/>
                 <main className={classes.content}>
                     <div className={classes.toolbar} />
-                    <Index/>
+                    {children}
                 </main>
             </div>
         );

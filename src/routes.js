@@ -1,6 +1,6 @@
 import React from 'react';
-import Login from './containers/login';
-import Scheduler from './containers/layout/scheduler';
+import Login from './pages/Login/Login';
+import Scheduler from './pages/Scheduler/Scheduler';
 
 const Routes = [
     {

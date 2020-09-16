@@ -5,13 +5,14 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import PermIdentityOutlinedIcon from '@material-ui/icons/PermIdentityOutlined';
 import { connect } from 'react-redux';
 
-import styles from './styles';
-import { Resource, Message } from '../../resources/resource.vi';
-import { stringFormat } from '../../utils/cfuntion';
-import { ApiUrl } from './../../constants/apiConfig';
-import callApi from './../../utils/callApi';
-import * as StoreAction from './../../store/actions/userInfo';
-import userInfoModel from './../../store/stateModels/userInfo'
+import styles from './Login.style';
+import { Resource, Message } from '../../assets/resources/resource.vi';
+import { stringFormat } from '../../helpers/cfuntion';
+import { ApiUrl } from '../../constants/apiConfig';
+import callApi from './../../helpers/callApi';
+import * as StoreAction from '../../store/actions/userInfo';
+import * as localStore from '../../store/localStorages';
+import userInfoModel from '../../store/stateModels/userInfo'
 
 class Login extends Component {
 
@@ -66,6 +67,8 @@ class Login extends Component {
                 userInfo.Token = data.data.Token;
                 userInfo.TokenExpired = data.data.TokenExpired;
                 this.props.setUserInfo(userInfo);
+
+                localStore.put('userInfo', JSON.stringify(userInfo));
                 
                 const { history } = this.props;
                 if(history) {

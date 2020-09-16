@@ -1,4 +1,4 @@
-import bg from './../../images/bg-01.jpg'
+import bg from './../../assets/images/bg-01.jpg'
 
 const styles = () => ({
     backgroud: {

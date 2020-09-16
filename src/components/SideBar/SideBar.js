@@ -15,10 +15,10 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 
-import styles from './styles/sidebarStyle';
+import styles from './SideBar.style';
 
 
-class Sidebar extends Component {
+class SideBar extends Component {
     
     render() {
         
@@ -68,4 +68,4 @@ class Sidebar extends Component {
     }
 }
 
-export default (withStyles(styles)(Sidebar));
+export default (withStyles(styles)(SideBar));

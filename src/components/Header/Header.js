@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import clsx from 'clsx';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import { 
     AppBar, 
@@ -11,8 +12,8 @@ import {
     Menu,
     MenuItem } from '@material-ui/core';
 import * as Icon from '@material-ui/icons';
-
-import styles from './styles/headerStyle'; 
+import * as localStore from '../../store/localStorages';
+import styles from './Header.style'; 
 
 const menuId = 'primary-search-account-menu';
 class Header extends Component {
@@ -35,9 +36,19 @@ class Header extends Component {
         });
     }
 
+    handleLogout = () => {
+        const { history } = this.props;
+        if(history) {
+            localStore.remove('userInfo');
+            history.push('/');
+        }
+    }
+
     renderMenu = () => {
         const { anchorEl } = this.state;
         const isMenuOpen = Boolean(anchorEl);
+        const userInfo = JSON.parse(localStore.get('userInfo'));
+        
         return (
             <Menu
                 anchorEl={anchorEl}
@@ -51,8 +62,8 @@ class Header extends Component {
                     horizontal: "center",
                 }}
             >
-                <MenuItem onClick={this.handleMenuClose}>{this.props.todos.FullName}</MenuItem>
-                <MenuItem onClick={this.handleMenuClose}>Logout</MenuItem>
+                <MenuItem onClick={this.handleMenuClose}>{userInfo.FullName}</MenuItem>
+                <MenuItem onClick={this.handleLogout}>Logout</MenuItem>
             </Menu>
         );
     }
@@ -118,4 +129,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, null)(withStyles(styles)(Header));
+export default connect(mapStateToProps, null)(withStyles(styles)(withRouter(Header)));
