@@ -22,7 +22,6 @@ class SchedulerLayout extends Component {
         
         return (
             <div className={classes.root}>
-                <Header handleClick={this.toggleSidebar} isOpenSidebar={this.state.isOpenSidebar} />
                 <Sidebar handleClick={this.toggleSidebar} isOpenSidebar={this.state.isOpenSidebar}/>
                 <main className={classes.content}>
                     <div className={classes.toolbar} />

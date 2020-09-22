@@ -14,14 +14,14 @@ const Header = withStyles(styles)(class Header extends Component {
         return (
             <TableHead>
                 <TableRow>
-                    <TableCell padding="none" align="center" style={{width: "130px"}}></TableCell>
-                    <TableCell padding="none" colSpan="2" align="center" className={classes.locked}>Locked</TableCell>
-                    <TableCell padding="none" colSpan="2" align="center" className={classes.open}>Open</TableCell>
-                    <TableCell padding="none" colSpan="2" align="center" className={classes.open}>Open</TableCell>
-                    <TableCell padding="none" colSpan="2" align="center" className={classes.open}>Open</TableCell>
-                    <TableCell padding="none" colSpan="2" align="center" className={classes.open}>Open</TableCell>
-                    <TableCell padding="none" colSpan="2" align="center" className={classes.open}>Open</TableCell>
-                    <TableCell padding="none" colSpan="2" align="center" className={classes.open}>Open</TableCell>
+                    <TableCell padding="none" align="center" style={{width: "130px"}} className={classes.clearStyleCell}></TableCell>
+                    <TableCell padding="none" colSpan="2" align="center" className={`${classes.locked} ${classes.clearStyleCell}`}>Locked</TableCell>
+                    <TableCell padding="none" colSpan="2" align="center" className={`${classes.open} ${classes.clearStyleCell}`}>Open</TableCell>
+                    <TableCell padding="none" colSpan="2" align="center" className={`${classes.open} ${classes.clearStyleCell}`}>Open</TableCell>
+                    <TableCell padding="none" colSpan="2" align="center" className={`${classes.open} ${classes.clearStyleCell}`}>Open</TableCell>
+                    <TableCell padding="none" colSpan="2" align="center" className={`${classes.open} ${classes.clearStyleCell}`}>Open</TableCell>
+                    <TableCell padding="none" colSpan="2" align="center" className={`${classes.open} ${classes.clearStyleCell}`}>Open</TableCell>
+                    <TableCell padding="none" colSpan="2" align="center" className={`${classes.open} ${classes.clearStyleCell}`}>Open</TableCell>
                     <TableCell padding="none" align="center" className={classes.clearStyleCell}></TableCell>
                     <TableCell padding="none" align="center" className={classes.clearStyleCell}></TableCell>
                 </TableRow>

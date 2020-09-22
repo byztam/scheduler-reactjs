@@ -11,11 +11,12 @@ import {
     Divider,
 
 } from '@material-ui/core';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import * as Icon from '@material-ui/icons';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 
 import styles from './SideBar.style';
+import { ChevronRight } from '@material-ui/icons';
 
 
 class SideBar extends Component {
@@ -42,7 +43,7 @@ class SideBar extends Component {
             >
                 <div className={classes.toolbar}>
                 <IconButton onClick={this.props.handleClick}>
-                    <ChevronLeftIcon />
+                    {this.props.isOpenSidebar ? <Icon.ChevronLeft /> : <Icon.ChevronRight />}
                 </IconButton>
                 </div>
                 <Divider />
