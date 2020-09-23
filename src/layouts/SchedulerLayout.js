@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Header from './../components/Header/Header';
-import Sidebar from './../components/SideBar/SideBar';
+import Sidebar from '../components/Sidebar/Sidebar';
 import { withStyles } from '@material-ui/core';
 
 import styles from './SchedulerLayout.style';

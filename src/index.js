@@ -6,12 +6,15 @@ import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import appReducer from './store/reducers';
+import CommonProvider from './components/CommonContext/CommonContext.provider';
 
 const store = createStore(appReducer);
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />
+		<CommonProvider>
+            <App />
+        </CommonProvider>
     </Provider>,
     document.getElementById('root')
 );

@@ -9,8 +9,7 @@ import {
 } from '@material-ui/core';
 import styles from './Timeblock.style';
 import { withStyles } from '@material-ui/core';
-import Backdrop from './../../../components/Backdrop/Backdrop';
-import BackdropContext from './../../../contexts/BackdorContext';
+import CommonContext from '../../../contexts/CommonContext';
 
 const Header = withStyles(styles)(class Header extends Component {
     render() {
@@ -76,11 +75,12 @@ const Body = withStyles(styles)(class Body extends Component {
         }
     }
 
-    handleSaveWork = (backdropOpen, backdropClose) => {
-        backdropOpen();
+    handleSaveWork = (Backdrop, Snackbar) => {
+        Backdrop('show');
         setTimeout(() => {
-            backdropClose();
-        }, 5000);
+            Backdrop('hide');
+            Snackbar('Save successfully.', 'success', 1000);
+        }, 2000);
     }
 
     render() {
@@ -95,19 +95,17 @@ const Body = withStyles(styles)(class Body extends Component {
                                     {rowData.name}
                                     <span className={classes.timeblock}> #{(index+1)}</span>
                                 </TableCell>
-                                {
-                                    rowData.cellData.map((data, key) => {
-                                        return (
-                                            <TableCell key={key} padding="none" align="left">
-                                                <Input 
-                                                    className={classes.cellInput}
-                                                    fullWidth
-                                                    defaultValue={data}
-                                                    disableUnderline={true}
-                                                />
-                                            </TableCell>
-                                        )
-                                    })
+                                { 
+                                    rowData.cellData.map((data, key) => (
+                                        <TableCell key={key} padding="none" align="left">
+                                            <Input 
+                                                className={classes.cellInput}
+                                                fullWidth
+                                                defaultValue={data}
+                                                disableUnderline={true}
+                                            />
+                                        </TableCell>
+                                    )) 
                                 }
                             </TableRow>
                         )
@@ -115,17 +113,16 @@ const Body = withStyles(styles)(class Body extends Component {
                 }
                 <TableRow>
                     <TableCell padding="none" align="right" colSpan="15" className={classes.tdSaveAttendance}>
-                        <BackdropContext.Consumer>
-                            {({ isOpen, handleOpen, handleClose }) => 
+                        <CommonContext.Consumer>
+                            {({ Backdrop, Snackbar }) => 
                                 <div>
-                                    <Backdrop isOpen={isOpen} />
                                     <Button 
                                         variant="contained" 
                                         color="primary"
-                                        onClick={() => {this.handleSaveWork(handleOpen, handleClose)}}>Save Attendance</Button>
+                                        onClick={() => {this.handleSaveWork(Backdrop, Snackbar)}}>Save Attendance</Button>
                                 </div>
                             }
-                        </BackdropContext.Consumer>
+                        </CommonContext.Consumer>
                     </TableCell>
                 </TableRow>
             </TableBody>

@@ -6,7 +6,7 @@ import {
 } from '@material-ui/core';
 import styles from './Backdrop.style.js';
 
-class Backdor extends Component {
+class BackdropCM extends Component {
     render() {
         const { classes } = this.props;
         return (
@@ -17,4 +17,4 @@ class Backdor extends Component {
     }
 }
 
-export default withStyles(styles)(Backdor);
+export default withStyles(styles)(BackdropCM);

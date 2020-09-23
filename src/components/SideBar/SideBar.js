@@ -12,12 +12,7 @@ import {
 
 } from '@material-ui/core';
 import * as Icon from '@material-ui/icons';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
-
-import styles from './SideBar.style';
-import { ChevronRight } from '@material-ui/icons';
-
+import styles from './Sidebar.style';
 
 class SideBar extends Component {
     
@@ -50,7 +45,7 @@ class SideBar extends Component {
                 <List>
                 {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
                     <ListItem button key={text}>
-                    <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+                    <ListItemIcon>{index % 2 === 0 ? <Icon.MoveToInbox /> : <Icon.Mail />}</ListItemIcon>
                     <ListItemText primary={text} />
                     </ListItem>
                 ))}
@@ -59,7 +54,7 @@ class SideBar extends Component {
                 <List>
                 {['All mail', 'Trash', 'Spam'].map((text, index) => (
                     <ListItem button key={text}>
-                    <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+                    <ListItemIcon>{index % 2 === 0 ? <Icon.MoveToInbox /> : <Icon.Mail />}</ListItemIcon>
                     <ListItemText primary={text} />
                     </ListItem>
                 ))}
