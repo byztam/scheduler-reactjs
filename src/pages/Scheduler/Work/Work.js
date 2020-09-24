@@ -175,7 +175,9 @@ const Body = withStyles(styles)(class Body extends Component {
                                     id="outlined-basic"
                                     label="Add more work"
                                     variant="outlined"
-                                    size="small"/>
+                                    size="small"
+                                    helperText={this.state.workName}
+                                    />
 
                                 <Button 
                                     variant="contained" 
