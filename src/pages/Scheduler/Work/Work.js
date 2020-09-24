@@ -51,53 +51,127 @@ const Header = withStyles(styles)(class Header extends Component {
 });
 
 const Body = withStyles(styles)(class Body extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            dataWork: [
+                {
+                    name: '001-111-2020',
+                    cellData: [
+                        {
+                            hours: '1:00',
+                            text: 'test'
+                        },
+                        {
+                            hours: '1:00',
+                            text: 'test'
+                        },
+                        {
+                            hours: '1:00',
+                            text: 'test'
+                        },
+                        {
+                            hours: '1:00',
+                            text: 'test'
+                        },
+                        {
+                            hours: '1:00',
+                            text: 'test'
+                        },
+                        {
+                            hours: '1:00',
+                            text: 'test'
+                        },
+                        {
+                            hours: '1:00',
+                            text: 'test'
+                        }
+                    ],
+                    total: '50:00',
+                    description: ''
+                }
+            ]
+        }
+    }
+    
+    handleSaveWork = () => {
+        console.log(this.txtWorkName.value)
+        const emptyData = {
+            name: '001-111-2020',
+            cellData: [
+                {
+                    hours: '1:00',
+                    text: 'test'
+                },
+                {
+                    hours: '1:00',
+                    text: 'test'
+                },
+                {
+                    hours: '1:00',
+                    text: 'test'
+                },
+                {
+                    hours: '1:00',
+                    text: 'test'
+                },
+                {
+                    hours: '1:00',
+                    text: 'test'
+                },
+                {
+                    hours: '1:00',
+                    text: 'test'
+                },
+                {
+                    hours: '1:00',
+                    text: 'test'
+                }
+            ],
+            total: '50:00',
+            description: ''
+        };
+
+        this.setState({
+            dataWork: [
+                ...this.state.dataWork,
+                emptyData
+            ]
+        })
+    }
+    
     render() {
         const { classes } = this.props;
         return (
             <TableBody>
-                <TableRow>
-                    <TableCell padding="none" align="left">001-111-2020</TableCell>
-                    <TableCell padding="none" align="left">3:00</TableCell>
-                    <TableCell padding="none" align="left"></TableCell>
-                    <TableCell padding="none" align="left">2:00</TableCell>
-                    <TableCell padding="none" align="left">test</TableCell>
-                    <TableCell padding="none" align="left"></TableCell>
-                    <TableCell padding="none" align="left"></TableCell>
-                    <TableCell padding="none" align="left"></TableCell>
-                    <TableCell padding="none" align="left"></TableCell>
-                    <TableCell padding="none" align="left"></TableCell>
-                    <TableCell padding="none" align="left"></TableCell>
-                    <TableCell padding="none" align="left"></TableCell>
-                    <TableCell padding="none" align="left"></TableCell>
-                    <TableCell padding="none" align="left"></TableCell>
-                    <TableCell padding="none" align="left"></TableCell>
-                    <TableCell padding="none" align="center">20:00</TableCell>
-                    <TableCell padding="none" align="left"></TableCell>
-                </TableRow>
-                <TableRow>
-                    <TableCell padding="none" align="left">001-111-2020</TableCell>
-                    <TableCell padding="none" align="left"></TableCell>
-                    <TableCell padding="none" align="left"></TableCell>
-                    <TableCell padding="none" align="left"></TableCell>
-                    <TableCell padding="none" align="left"></TableCell>
-                    <TableCell padding="none" align="left"></TableCell>
-                    <TableCell padding="none" align="left"></TableCell>
-                    <TableCell padding="none" align="left"></TableCell>
-                    <TableCell padding="none" align="left"></TableCell>
-                    <TableCell padding="none" align="left"></TableCell>
-                    <TableCell padding="none" align="left"></TableCell>
-                    <TableCell padding="none" align="left"></TableCell>
-                    <TableCell padding="none" align="left"></TableCell>
-                    <TableCell padding="none" align="left"></TableCell>
-                    <TableCell padding="none" align="left"></TableCell>
-                    <TableCell padding="none" align="center"></TableCell>
-                    <TableCell padding="none" align="left"></TableCell>
-                </TableRow>
+                {
+                    this.state.dataWork.map((data, index) => (
+                        <TableRow key={index}>
+                            <TableCell padding="none" align="left">{ data.name }</TableCell>
+                            <TableCell padding="none" align="left">{ data.cellData[0].hours }</TableCell>
+                            <TableCell padding="none" align="left">{ data.cellData[0].text }</TableCell>
+                            <TableCell padding="none" align="left">{ data.cellData[1].hours }</TableCell>
+                            <TableCell padding="none" align="left">{ data.cellData[1].text }</TableCell>
+                            <TableCell padding="none" align="left">{ data.cellData[2].hours }</TableCell>
+                            <TableCell padding="none" align="left">{ data.cellData[2].text }</TableCell>
+                            <TableCell padding="none" align="left">{ data.cellData[3].hours }</TableCell>
+                            <TableCell padding="none" align="left">{ data.cellData[3].text }</TableCell>
+                            <TableCell padding="none" align="left">{ data.cellData[4].hours }</TableCell>
+                            <TableCell padding="none" align="left">{ data.cellData[4].text }</TableCell>
+                            <TableCell padding="none" align="left">{ data.cellData[5].hours }</TableCell>
+                            <TableCell padding="none" align="left">{ data.cellData[5].text }</TableCell>
+                            <TableCell padding="none" align="left">{ data.cellData[6].hours }</TableCell>
+                            <TableCell padding="none" align="left">{ data.cellData[6].text }</TableCell>
+                            <TableCell padding="none" align="center">{ data.total }</TableCell>
+                            <TableCell padding="none" align="left">{ data.description }</TableCell>
+                        </TableRow>
+                    ))
+                }
                 <TableRow>
                     <TableCell colSpan="17" className={classes.tdSaveWork}>
                         <Typography component="div" align="justify">
-                    
                                 <TextField 
+                                inputRef={ref => { this.txtWorkName = ref; }}
                                     id="outlined-basic"
                                     label="Add more work"
                                     variant="outlined"
@@ -107,8 +181,8 @@ const Body = withStyles(styles)(class Body extends Component {
                                     variant="contained" 
                                     color="primary" 
                                     align="center"
+                                    onClick={this.handleSaveWork}
                                     className={classes.btnSaveWork}>SAVE WORK</Button>
-                        
                         </Typography>
                     </TableCell>
                 </TableRow>
