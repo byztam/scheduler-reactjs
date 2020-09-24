@@ -24,6 +24,9 @@ const styles = () => ({
       backgroundColor: '#e0e0e0',
       width: 100
     },
+    validcolor: {
+      color: '#e62528'
+    }
   })
   
   export default styles;

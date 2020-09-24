@@ -1,9 +1,9 @@
-const ResourceVI = {
+const ResourceEN = {
     login: {
-        lblLoginTitle: 'Đăng nhập',
-        lblUername: 'Tài khoản',
-        lblPassword: 'Mật khẩu',
-        btnLogin: 'Đăng nhập',
+        lblLoginTitle: 'Login',
+        lblUername: 'Username',
+        lblPassword: 'Password',
+        btnLogin: 'Login',
     },
     timeBlock: {
         lblAttendance: 'ATTENDANCE',
@@ -17,13 +17,13 @@ const ResourceVI = {
     }
 };
 
-const MessageVI = {
+const MessageEN = {
     Common: {
-        MsgRequired: '{0} bắt buộc nhập',
+        MsgRequired: '{0} is required',
     }
 };
 
 export {
-    ResourceVI,
-    MessageVI
+    ResourceEN,
+    MessageEN
 };

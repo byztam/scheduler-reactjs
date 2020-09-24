@@ -6,7 +6,7 @@ import PermIdentityOutlinedIcon from '@material-ui/icons/PermIdentityOutlined';
 import { connect } from 'react-redux';
 
 import styles from './Index.style';
-import { Resource, Message } from '../../assets/resources/resource.vi';
+import { Resource, Message } from '../../assets/resources/resource';
 import { stringFormat } from '../../helpers/cfuntion';
 import { ApiUrl } from '../../constants/apiConfig';
 import callApi from '../../helpers/callApi';
@@ -35,13 +35,13 @@ class Login extends Component {
         });
         if(user === '') {
             this.setState({
-                validUser: stringFormat(Message.Common.Msg_Required, [Resource.login.lblUername])
+                validUser: stringFormat(Message.Common.MsgRequired, [Resource.login.lblUername])
             });
             isValid = false;
         }
         if(password === '') {
             this.setState({
-                validPasword: stringFormat(Message.Common.Msg_Required, [Resource.login.lblPassword])
+                validPasword: stringFormat(Message.Common.MsgRequired, [Resource.login.lblPassword])
             });
             isValid = false;
         }

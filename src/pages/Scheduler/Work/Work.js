@@ -10,6 +10,8 @@ import {
 } from '@material-ui/core';
 import styles from './Work.style';
 import { withStyles } from '@material-ui/core';
+import { stringFormat } from './../../../helpers/cfuntion';
+import { Resource, Message } from './../../../assets/resources/resource';
 
 const Header = withStyles(styles)(class Header extends Component {
     render() {
@@ -18,7 +20,9 @@ const Header = withStyles(styles)(class Header extends Component {
             <TableHead>
                 <TableRow style={{height: 50}}></TableRow>
                 <TableRow className={classes.bgHeader}>
-                    <TableCell padding="none" rowSpan="2" align="center" style={{width: "130px"}}>WORK</TableCell>
+                    <TableCell padding="none" rowSpan="2" align="center" style={{width: "130px"}}>
+                        {Resource.work.work}
+                    </TableCell>
                     <TableCell padding="none" colSpan="2" align="center" className={classes.bgHeader2}>MON</TableCell>
                     <TableCell padding="none" colSpan="2" align="center" className={classes.bgHeader2}>TUE</TableCell>
                     <TableCell padding="none" colSpan="2" align="center" className={classes.bgHeader2}>WED</TableCell>
@@ -54,6 +58,9 @@ const Body = withStyles(styles)(class Body extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            validator: {
+                workName: ''
+            },
             dataWork: [
                 {
                     name: '001-111-2020',
@@ -95,40 +102,55 @@ const Body = withStyles(styles)(class Body extends Component {
     }
     
     handleSaveWork = () => {
-        console.log(this.txtWorkName.value)
+        this.setState({
+            validator: {
+                workName: ''
+            }
+        });
+
+        var workName = this.txtWorkName.value;
+        if(workName === '') {
+            this.setState({
+                validator: {
+                    workName: stringFormat(Message.Common.MsgRequired, ['Name'])
+                }
+            });
+            return;
+        }
+
         const emptyData = {
-            name: '001-111-2020',
+            name: workName,
             cellData: [
                 {
-                    hours: '1:00',
-                    text: 'test'
+                    hours: '',
+                    text: ''
                 },
                 {
-                    hours: '1:00',
-                    text: 'test'
+                    hours: '',
+                    text: ''
                 },
                 {
-                    hours: '1:00',
-                    text: 'test'
+                    hours: '',
+                    text: ''
                 },
                 {
-                    hours: '1:00',
-                    text: 'test'
+                    hours: '',
+                    text: ''
                 },
                 {
-                    hours: '1:00',
-                    text: 'test'
+                    hours: '',
+                    text: ''
                 },
                 {
-                    hours: '1:00',
-                    text: 'test'
+                    hours: '',
+                    text: ''
                 },
                 {
-                    hours: '1:00',
-                    text: 'test'
+                    hours: '',
+                    text: ''
                 }
             ],
-            total: '50:00',
+            total: '',
             description: ''
         };
 
@@ -147,7 +169,9 @@ const Body = withStyles(styles)(class Body extends Component {
                 {
                     this.state.dataWork.map((data, index) => (
                         <TableRow key={index}>
-                            <TableCell padding="none" align="left">{ data.name }</TableCell>
+                            <TableCell padding="none" align="left">
+                                { data.name }
+                            </TableCell>
                             <TableCell padding="none" align="left">{ data.cellData[0].hours }</TableCell>
                             <TableCell padding="none" align="left">{ data.cellData[0].text }</TableCell>
                             <TableCell padding="none" align="left">{ data.cellData[1].hours }</TableCell>
@@ -162,8 +186,12 @@ const Body = withStyles(styles)(class Body extends Component {
                             <TableCell padding="none" align="left">{ data.cellData[5].text }</TableCell>
                             <TableCell padding="none" align="left">{ data.cellData[6].hours }</TableCell>
                             <TableCell padding="none" align="left">{ data.cellData[6].text }</TableCell>
-                            <TableCell padding="none" align="center">{ data.total }</TableCell>
-                            <TableCell padding="none" align="left">{ data.description }</TableCell>
+                            <TableCell padding="none" align="center">
+                                { data.total }
+                            </TableCell>
+                            <TableCell padding="none" align="left">
+                                { data.description }
+                            </TableCell>
                         </TableRow>
                     ))
                 }
@@ -171,12 +199,17 @@ const Body = withStyles(styles)(class Body extends Component {
                     <TableCell colSpan="17" className={classes.tdSaveWork}>
                         <Typography component="div" align="justify">
                                 <TextField 
-                                inputRef={ref => { this.txtWorkName = ref; }}
+                                    inputRef={ref => { this.txtWorkName = ref; }}
                                     id="outlined-basic"
                                     label="Add more work"
                                     variant="outlined"
                                     size="small"
-                                    helperText={this.state.workName}
+                                    helperText={this.state.validator.workName}
+                                    FormHelperTextProps={{
+                                        classes: {
+                                            root: classes.validcolor
+                                        }
+                                    }}
                                     />
 
                                 <Button 
@@ -184,7 +217,7 @@ const Body = withStyles(styles)(class Body extends Component {
                                     color="primary" 
                                     align="center"
                                     onClick={this.handleSaveWork}
-                                    className={classes.btnSaveWork}>SAVE WORK</Button>
+                                    className={classes.btnSaveWork}>{ Resource.work.btnSaveWork }</Button>
                         </Typography>
                     </TableCell>
                 </TableRow>
