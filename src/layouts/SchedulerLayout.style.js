@@ -1,6 +1,11 @@
+import bg from '../assets/images/mainBackground.jpg'
+
 const styles = (theme) => ({
     root: {
         display: 'flex',
+        backgroundImage: `url(${bg})`,
+        backgroundSize: 'cover',
+        backgroundReplace: 'none'
       },
     toolbar: {
         display: 'flex',

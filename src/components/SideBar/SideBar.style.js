@@ -4,6 +4,15 @@ const styles = (theme) => ({
         flexShrink: 0,
         whiteSpace: 'nowrap',
     },
+    paper: {
+      background: "#000000c9"
+    },
+    listItemText:{
+      color:"white"
+    },
+    dividerColor: {
+      backgroundColor: '#8a7b7b',
+    },
     drawerOpen: {
         width: 240,
         transition: theme.transitions.create('width', {
@@ -19,7 +28,7 @@ const styles = (theme) => ({
         overflowX: 'hidden',
         width: theme.spacing(7) + 1,
         [theme.breakpoints.up('sm')]: {
-          width: theme.spacing(9) + 1,
+          width: theme.spacing(8) + 1,
         },
     },
     toolbar: {

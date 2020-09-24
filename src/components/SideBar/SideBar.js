@@ -25,7 +25,7 @@ class SideBar extends Component {
         const { classes } = this.props;
         
         return (
-            <Drawer
+            <Drawer 
                 variant="permanent"
                 className={
                     clsx(classes.drawer, {
@@ -37,7 +37,8 @@ class SideBar extends Component {
                     paper: clsx({
                         [classes.drawerOpen]: this.props.isOpenSidebar,
                         [classes.drawerClose]: !this.props.isOpenSidebar,
-                    })
+                    },
+                    classes.paper)
                 }}
             >
                 <div className={classes.toolbar}>
@@ -45,21 +46,21 @@ class SideBar extends Component {
                     <ChevronLeftIcon />
                 </IconButton>
                 </div>
-                <Divider />
+                <Divider classes={{root: classes.dividerColor}}/>
                 <List>
                 {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
                     <ListItem button key={text}>
-                    <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                    <ListItemText primary={text} />
+                    <ListItemIcon>{index % 2 === 0 ? <InboxIcon color="primary" /> : <MailIcon color="primary" />}</ListItemIcon>
+                    <ListItemText primary={text} classes={{primary:classes.listItemText}}/>
                     </ListItem>
                 ))}
                 </List>
-                <Divider />
+                <Divider classes={{root: classes.dividerColor}}/>
                 <List>
                 {['All mail', 'Trash', 'Spam'].map((text, index) => (
                     <ListItem button key={text}>
-                    <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                    <ListItemText primary={text} />
+                    <ListItemIcon>{index % 2 === 0 ? <InboxIcon color="primary"/> : <MailIcon color="primary"/>}</ListItemIcon>
+                    <ListItemText primary={text} classes={{primary:classes.listItemText}}/>
                     </ListItem>
                 ))}
                 </List>

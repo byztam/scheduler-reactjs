@@ -80,6 +80,7 @@ class Header extends Component {
                             [classes.appBarShift]: this.props.isOpenSidebar,
                         })
                     }
+                    style={{ background: 'transparent', boxShadow: 'none'}}
                 >
                     <Toolbar>
                         <IconButton
@@ -95,9 +96,9 @@ class Header extends Component {
                         >
                             <Icon.Menu />
                         </IconButton>
-                        <Typography variant="h6" noWrap>
+                        {/* <Typography variant="h6" noWrap>
                             Scheduler
-                        </Typography>
+                        </Typography> */}
                         <div className={classes.grow} />
                         <div className={classes.sectionDesktop}></div>
                         <IconButton aria-label="show 17 new notifications" color="inherit">

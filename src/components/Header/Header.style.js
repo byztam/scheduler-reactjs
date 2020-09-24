@@ -1,4 +1,8 @@
 const styles = (theme) => ({
+  paper: {
+    background: 'transparent', 
+    boxShadow: 'none'
+  },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
     transition: theme.transitions.create(['width', 'margin'], {
