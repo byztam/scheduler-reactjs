@@ -5,11 +5,11 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import PermIdentityOutlinedIcon from '@material-ui/icons/PermIdentityOutlined';
 import { connect } from 'react-redux';
 
-import styles from './Login.style';
+import styles from './Index.style';
 import { Resource, Message } from '../../assets/resources/resource.vi';
 import { stringFormat } from '../../helpers/cfuntion';
 import { ApiUrl } from '../../constants/apiConfig';
-import callApi from './../../helpers/callApi';
+import callApi from '../../helpers/callApi';
 import * as StoreAction from '../../store/actions/userInfo';
 import * as localStore from '../../store/localStorages';
 import userInfoModel from '../../store/stateModels/userInfo'

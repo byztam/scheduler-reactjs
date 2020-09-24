@@ -13,7 +13,7 @@ const styles = (theme) => ({
         justifyContent: 'flex-end',
         padding: theme.spacing(0, 1),
         // necessary for content to be below app bar
-        ...theme.mixins.toolbar,
+        //...theme.mixins.toolbar,
     },
     content: {
         flexGrow: 1,

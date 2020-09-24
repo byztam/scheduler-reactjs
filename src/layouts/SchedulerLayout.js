@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Header from './../components/Header/Header';
-import Sidebar from './../components/SideBar/SideBar';
+import Sidebar from '../components/Sidebar/Sidebar';
 import { withStyles } from '@material-ui/core';
 
 import styles from './SchedulerLayout.style';
@@ -22,7 +21,6 @@ class SchedulerLayout extends Component {
         
         return (
             <div className={classes.root}>
-                <Header handleClick={this.toggleSidebar} isOpenSidebar={this.state.isOpenSidebar} />
                 <Sidebar handleClick={this.toggleSidebar} isOpenSidebar={this.state.isOpenSidebar}/>
                 <main className={classes.content}>
                     <div className={classes.toolbar} />
